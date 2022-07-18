@@ -35,7 +35,6 @@ const CongratsPage = () => {
         <LogoWrap>
         <img width="170px" alt="logo" src={Logo}/>
         </LogoWrap>
-         
 
         </Base>
        
