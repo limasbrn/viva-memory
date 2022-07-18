@@ -4,6 +4,7 @@ import HomePage from "./pages/home";
 import EaseLevelPage from "./pages/ease";
 import NormalLevelPage from "./pages/normal";
 import HardLevelPage from "./pages/hard";
+import CongratsPage from "./pages/congrats";
 
 
 
@@ -26,6 +27,10 @@ const MainRoutes = ( ) => {
             <Route 
             path="/hard" 
             element={<HardLevelPage/>}
+            />
+            <Route 
+            path="/congrats" 
+            element={<CongratsPage/>}
             />
             
         </Routes>  
