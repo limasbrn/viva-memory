@@ -7,7 +7,6 @@ import Baby from "../image/Baby.svg"
 import Boy from "../image/Boy.svg"
 import Exploding from "../image/Exploding-Head.svg"
 
-
 const HomePage = () => {
     return (
     
