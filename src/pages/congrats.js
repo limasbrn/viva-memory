@@ -11,8 +11,8 @@ const TextWrap = styled("div", {
     margin:"30px auto 15px auto"
 });
 
-const LogoWrap = styled("header", {
-    marginTop: "50px",
+const LogoWrap = styled("footer", {
+    marginTop: "60px",
 });
 
 const CongratsPage = () => {
