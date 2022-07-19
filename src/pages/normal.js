@@ -79,8 +79,55 @@ const HeaderWrap = styled('header', {
 
     "@media (min-width: 500px)": {
         width:"350px",
+        fontSize:"20px",
+    },
+});
+
+const IconWrap =  styled('img', {
+    width:"25px",
+
+    "@media (min-width: 340px)": {
+        width:"27px",
+    },
+
+    "@media (min-width: 500px)": {
+        width:"35px",
+    },
+});
+
+const LevelWrap = styled('div', {
+    display:"flex",
+    color:"white",
+    fontSize:"15px",
+    margin:"30px auto 30px auto",
+
+    alignItems:"center",
+
+    "@media (min-width: 500px)": {
+        fontSize:"20px",
+    },
+});
+
+const Level = styled('div', {
+    width:"fit-content",
+    height:"fit-content",
+    padding:"3px 5px",
+    fontWeight:"bold",
+
+    backgroundColor:"white",
+    borderRadius:"5px",
+
+    marginLeft:"5px",
+
+    variants: {
+        color: {
+          ease: { color: "#00B336" },
+          normal: { color: "#333333" },
+          hard: { color: "#FF424E" },
+        },
     },
 })
+
 
 const NormalLevelPage = () => {
     return (
@@ -90,7 +137,7 @@ const NormalLevelPage = () => {
 
         <HeaderWrap>
             <span>3 movimentos</span>
-            <img width="25px" alt="Restart" src={ClockCountArrow}/>
+            <IconWrap alt="Restart" src={ClockCountArrow}/>
         </HeaderWrap>
         
         <TableBase>
@@ -105,6 +152,11 @@ const NormalLevelPage = () => {
             <CardBase></CardBase>
 
         </TableBase>
+
+        <LevelWrap>
+            <span>Nível:</span>
+            <Level color="ease">Fácil - 4</Level>
+        </LevelWrap>
         
         </Base>
     )
