@@ -14,7 +14,7 @@ const HomePage = () => {
         <Header/>
         <ButtonBase>
 
-            <Link to="/congrats" >
+            <Link to="/ease" >
             <Button color='ease'>
                 <img width="25px" alt="baby emoji" src={Baby}/>
                 <span>Fácil</span>

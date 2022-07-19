@@ -16,6 +16,7 @@ const CardBase = styled('div', {
     height:"50px",
 
     backgroundColor:"#d8d8d8",
+    borderRadius:"3px",
 
     "@media (min-width: 340px)": {
         width:"70px",
@@ -54,7 +55,7 @@ const NormalLevelPage = () => {
 
         <LevelWrap>
             <span>Nível:</span>
-            <Level color="ease">Fácil - 4</Level>
+            <Level color="normal">Normal - 8</Level>
         </LevelWrap>
         
         </Base>
