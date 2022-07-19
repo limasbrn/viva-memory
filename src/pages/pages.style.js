@@ -54,32 +54,6 @@ export const Button = styled("button", {
 
 /* ==== Table styles ==== */
 
-export const TableBase = styled('div', {
-  display:"flex",
-  flexWrap:"wrap",
-  width:"190px",
-  height:"fit-content",
-  
-  padding:"10px",
-  gap:"10px",
-  borderRadius:"5px",
-  backgroundColor:"white",
-  boxShadow:"2px 2px #7F1717",
-
-  "@media (min-width: 340px)": {
-      width:"265px",
-      padding:"13px",
-      gap:"13px",
-  },
-
-  "@media (min-width: 500px)": {
-      width:"350px",
-      padding:"15px",
-      gap:"15px",
-      boxShadow:"5px 5px #7F1717",
-  },
-});
-
 export const LogoWrap = styled('img', {
   width:"130px",
   margin:"30px auto 30px auto",
