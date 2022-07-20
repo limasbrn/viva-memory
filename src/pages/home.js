@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { styled } from '@stitches/react';
-import { Base, ButtonBase, Button} from './pages.style'
+import { Base, ButtonBase, Button, LinkWrap} from './pages.style'
 import { Header } from "../component/header";
 import Baby from "../image/Baby.svg"
 import Boy from "../image/Boy.svg"
@@ -14,26 +12,26 @@ const HomePage = () => {
         <Header/>
         <ButtonBase>
 
-            <Link to="/ease" >
+            <LinkWrap to="/ease">
             <Button color='ease'>
                 <img width="25px" alt="baby emoji" src={Baby}/>
                 <span>Fácil</span>
             </Button>
-            </Link>
+            </LinkWrap>
 
-            <Link to="/normal">
+            <LinkWrap to="/normal">
             <Button color='normal'>
                 <img width="25px" alt="baby emoji" src={Boy}/>
                 <span>Normal</span>
             </Button>
-            </Link>
+            </LinkWrap>
 
-            <Link to="/hard" >
+            <LinkWrap to="/hard" >
             <Button color='hard'>
                 <img width="25px" alt="baby emoji" src={Exploding}/>
                 <span>Difícil</span>
             </Button>
-            </Link>
+            </LinkWrap>
 
         </ButtonBase>
         </Base>

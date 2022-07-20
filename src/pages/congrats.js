@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from '@stitches/react';
-import { Link } from "react-router-dom";
-import { Base, ButtonBase, Button} from './pages.style'
+import { Base, ButtonBase, Button, LinkWrap} from './pages.style'
 import Logo from '../image/logo-completa.svg'
 import CheckMark from '../image/check-mark.svg'
 
@@ -16,7 +15,9 @@ const LogoWrap = styled("footer", {
 });
 
 const CongratsPage = () => {
+
     return (
+        
         <Base>
 
         <img width="60px" alt="logo" src={CheckMark}/>
@@ -26,11 +27,11 @@ const CongratsPage = () => {
             <span> Com - movimentos!</span>
         </TextWrap>
 
-         <Link to="/" >
+         <LinkWrap to="/" >
          <ButtonBase>
             <Button color='normal'>Jogar novamente</Button>
          </ButtonBase>
-         </Link>
+         </LinkWrap>
 
         <LogoWrap>
         <img width="170px" alt="logo" src={Logo}/>
