@@ -9,7 +9,7 @@ function CardsEase() {
     { id: 1, img: `${Butterfly}`, stat: "" },
     { id: 2, img: `${Cupcake}`, stat: "" },
     { id: 2, img: `${Cupcake}`, stat: "" },
-  ]);
+  ].sort(() => Math.random() -  0.5));
 
   return (
     <>

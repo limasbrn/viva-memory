@@ -12,7 +12,7 @@ const CardBase = styled('div', {
     alignItems:"center",
 
     "& > img": {
-
+       
     },
 
     "@media (min-width: 340px)": {
