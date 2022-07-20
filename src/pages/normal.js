@@ -9,6 +9,8 @@ import { Base ,
          Level } from "./pages.style";
 import Logo from '../image/logo-completa.svg'
 import ClockCountArrow from "../image/counterclockwise.svg"
+import CardsNormal from "../component/normal-card"
+
 
 const CardBase = styled('div', {
     width:"50px",
@@ -40,16 +42,7 @@ const NormalLevelPage = () => {
         </HeaderWrap>
         
         <TableBase>
-
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-            <CardBase></CardBase>
-
+            <CardsNormal/>
         </TableBase>
 
         <LevelWrap>

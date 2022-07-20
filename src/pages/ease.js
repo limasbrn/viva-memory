@@ -22,9 +22,7 @@ const EaseLevelPage = () => {
         </HeaderWrap>
         
         <TableBase>
-
-        <CardsEase/>
-
+            <CardsEase/>
         </TableBase>
 
         <LevelWrap>
