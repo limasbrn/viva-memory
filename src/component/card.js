@@ -27,22 +27,13 @@ const CardBase = styled('div', {
     justifyContent:"center",
     alignItems:"center",
 
-    animation:`${rotateCard} 2s`,
+    animation:`${rotateCard} 0.025s`,
     transition:"transform 0.5s",
-    
-    variants: {
-        backgroundColor: {
-            azul:{ backgroundColor:"#00b1f4" },
-            red:{ backgroundColor:"#ff424e" },
-            green:{ backgroundColor: "#00b335"},
-        },
-    },
     
     /*  Image related stuff */
     "& > img": {
         width:"50px",
         height:"auto",
-        animation:`${hideImage} 2s`,
         transform: "scale(0)",
         transition:"transform 0.5s",
         
@@ -101,7 +92,7 @@ function Card({item, id, handleClick}){
 
     return (
         <CardBase className={itemClass} onClick={()=> handleClick(id)}>
-            <img animation="hidden" src={item.img} alt=""/>
+            <img src={item.img} alt=""/>
         </CardBase>
     )
 }
