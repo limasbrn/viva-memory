@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "./card"
 import Butterfly from "../image/butterfly.svg";
 import Cupcake from "../image/cupcake.svg"
-import { toBeChecked } from "@testing-library/jest-dom/dist/matchers";
 
 function CardsEase() {
   const [items, setItems] = useState([
@@ -29,7 +28,7 @@ function CardsEase() {
                 items[prev].stat = ""
                 setItems([...items])
                 setPrev(-1)
-        }, 2000)
+        }, 1000)
       }
   }
 
