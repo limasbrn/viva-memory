@@ -11,14 +11,29 @@ const CardBase = styled('div', {
     justifyContent:"center",
     alignItems:"center",
 
+    "& > img":{
+        width:"35px",
+        height:"auto",
+    },
+
     "@media (min-width: 340px)": {
         width:"70px",
         height:"70px",
+
+        "& > img":{
+            width:"45px",
+            height:"auto",
+        },
     },
 
     "@media (min-width: 500px)": {
         width:"96px",
         height:"96px",
+
+        "& > img":{
+            width:"55px",
+            height:"auto",
+        },
     },
 })
 
