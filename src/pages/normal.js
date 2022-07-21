@@ -1,4 +1,3 @@
-import { styled } from "@stitches/react";
 import React from "react";
 import { Base ,
          TableBase ,
@@ -11,24 +10,6 @@ import Logo from '../image/logo-completa.svg'
 import ClockCountArrow from "../image/counterclockwise.svg"
 import CardsNormal from "../component/normal-card"
 
-
-const CardBase = styled('div', {
-    width:"50px",
-    height:"50px",
-
-    backgroundColor:"#d8d8d8",
-    borderRadius:"3px",
-
-    "@media (min-width: 340px)": {
-        width:"70px",
-        height:"70px",
-    },
-
-    "@media (min-width: 500px)": {
-        width:"96px",
-        height:"96px",
-    },
-})
 
 const NormalLevelPage = () => {
     return (

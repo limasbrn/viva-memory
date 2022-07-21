@@ -3,10 +3,6 @@ import Card from "./card-normal"
 import Cactus from "../image/cactus.svg";
 import Cereja from "../image/cherries.svg"
 import Donut from "../image/doughnut.svg";
-import Mushroom from "../image/mushroom.svg"
-import Popcorn from "../image/popcorn.svg";
-import Rabbit from "../image/rabbit.svg"
-import Rex from "../image/rex.svg";
 import Fish from "../image/fish.svg"
 
 function CardsNormal() {

@@ -1,4 +1,15 @@
-import { styled } from "@stitches/react";
+import { keyframes, styled } from "@stitches/react";
+
+
+const hideImage = keyframes({
+    '0%' : { transform: 'scale(0)' },
+    '100%' : { transform: 'scale(1)' },
+});
+
+const rotateCard = keyframes({
+    '0%' : { transform: 'rotateY(0)' },
+    '100%' : { transform: 'rotateY(180deg)' },
+});
 
 const CardBase = styled('div', {
     display:"flex",
@@ -11,9 +22,12 @@ const CardBase = styled('div', {
     justifyContent:"center",
     alignItems:"center",
 
+    animation:`${rotateCard} 2s`,
+
     "& > img": {
        width:"50px",
        height:"auto",
+       animation:`${hideImage} 2s`,
     },
 
     "@media (min-width: 340px)": {

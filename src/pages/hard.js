@@ -1,4 +1,3 @@
-import { styled } from "@stitches/react";
 import React from "react";
 import { Base ,
         TableBase ,
