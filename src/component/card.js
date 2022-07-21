@@ -1,9 +1,14 @@
 import { keyframes, styled } from "@stitches/react";
 
 
-const hideImage = keyframes({
+const showImage = keyframes({
     '0%' : { transform: 'scale(0)' },
     '100%' : { transform: 'scale(1)' },
+});
+
+const hideImage = keyframes({
+    '0%' : { transform: 'scale(1)' },
+    '100%' : { transform: 'scale(0)' },
 });
 
 const rotateCard = keyframes({
@@ -23,13 +28,52 @@ const CardBase = styled('div', {
     alignItems:"center",
 
     animation:`${rotateCard} 2s`,
-
+    transition:"transform 0.5s",
+    
+    variants: {
+        backgroundColor: {
+            azul:{ backgroundColor:"#00b1f4" },
+            red:{ backgroundColor:"#ff424e" },
+            green:{ backgroundColor: "#00b335"},
+        },
+    },
+    
+    /*  Image related stuff */
     "& > img": {
-       width:"50px",
-       height:"auto",
-       animation:`${hideImage} 2s`,
+        width:"50px",
+        height:"auto",
+        animation:`${hideImage} 2s`,
+        transform: "scale(0)",
+        transition:"transform 0.5s",
+        
+        variants:{
+            animation:{
+                show: {animation:`${showImage} 2s`},
+                hide: {animation:`${hideImage} 2s`},
+            },
+        },
+
+    },
+    
+   /*  classes */
+    '&.active': {
+        backgroundColor: '#00b1f4',
+        transform:"rotateY(0)",
+        
+        "& > img": {
+            transform: "scale(1)",
+        },
     },
 
+    '&.wrong': {
+        backgroundColor: '#ff424e',
+    },
+
+    '&.correct': {
+        backgroundColor: '#00b335',
+    },
+
+    /* Media queries */
     "@media (min-width: 340px)": {
         width:"113px",
         height:"113px",
@@ -49,12 +93,15 @@ const CardBase = styled('div', {
             height:"auto",
          },
     },
-})
+});
 
-function Card({item}){
+
+function Card({item, id, handleClick}){
+    const itemClass = item.stat? "active" + item.stat : "";
+
     return (
-        <CardBase>
-            <img src={item.img} alt=""/>
+        <CardBase className={itemClass} onClick={()=> handleClick(id)}>
+            <img animation="hidden" src={item.img} alt=""/>
         </CardBase>
     )
 }
