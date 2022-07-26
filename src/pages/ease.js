@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import { Base ,
          TableBase ,
          LogoWrap , 
@@ -11,18 +11,20 @@ import ClockCountArrow from "../image/counterclockwise.svg";
 import CardsEase from "../component/ease-card";
 
 const EaseLevelPage = () => {
+    const [ clicks, setClicks ] = useState(0);
+    
     return (
         <Base>
 
         <LogoWrap alt="logo" src={Logo} />
 
         <HeaderWrap>
-            <span>3 movimentos</span>
+            <span>{clicks}</span>
             <IconWrap alt="Restart" src={ClockCountArrow}/>
         </HeaderWrap>
         
         <TableBase>
-            <CardsEase/>
+            <CardsEase onClick={() => setClicks(clicks + 1)}/>
         </TableBase>
 
         <LevelWrap>

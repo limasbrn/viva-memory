@@ -12,6 +12,8 @@ function CardsEase() {
   ].sort(() => Math.random() -  0.5))
 
   const [prev, setPrev] = useState(-1)
+  const [ clicks, setClicks ] = useState(0);
+  
 
   function check(current){
       if(items[current].id == items[prev].id){
@@ -46,7 +48,7 @@ function CardsEase() {
   return (
     <>
       {items.map((item, index) => (
-        <Card key={index} item={item} id={index} handleClick={handleClick} />
+        <Card key={index} item={item} id={index} handleClick={handleClick} onClick={() => setClicks(clicks + 1)}/>
       ))}
     </>
   );
